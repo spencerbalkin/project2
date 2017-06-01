@@ -1,0 +1,31 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "project2",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.6",
+    "eslint": "^3.19.0",
+    "express": "^4.15.3",
+    "jquery": "^3.2.1",
+    "method-override": "^2.3.9",
+    "morgan": "^1.8.2",
+    "pg-promise": "^5.8.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "\"green light\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spencerbalkin/project2.git"
+  },
+  "author": "Spencer Balkin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spencerbalkin/project2/issues"
+  },
+  "homepage": "https://github.com/spencerbalkin/project2#readme"
+}
