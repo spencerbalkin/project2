@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include ./partials/head.ejs %>
+  </head>
+  <body>
+
+    <form method="POST" action="/new">
+      <div class="container margin-top-20">
+        <div class="row">
+          <div class="col s12">
+            <div class="card">
+              <div class="card-stacked">
+                <div class="card-content">
+
+                  <div class="input-field">
+                    <input name="entry[title]" type="text" placeholder="Title" />
+                  </div>
+
+                  <div class="input-field">
+                    <textarea name="entry[text]" placeholder="Entry Description" class="materialize-textarea"></textarea>
+                  </div>
+
+                  <div class="input-field">
+                    <input name="entry[image]" type="text" placeholder="image url only" />
+                  </div>
+
+                  <div class="input-field">
+                    <input name="entry[age]"
+                    type="text"
+                    placeholder="input age"
+                    />
+                  </div>
+
+                  <div class="card-action">
+                  <button type="submit" class="waves-effect waves-light btn">Submit Post</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+  </body>
+</html>

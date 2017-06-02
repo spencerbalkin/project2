@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include ./partials/head.ejs %>
+  </head>
+  <body>
+    <a href="/new">new post</a>
+      <% entry.forEach(function(enter) { %>
+  <a href="<%= enter.id %>">
+  <div id="container">
+    <div id="content-container">
+      <div id="image-container">
+        <img id="main-images" src=<%= enter.image %> />
+      </div>
+      <p>
+        <%= enter.title %>
+      </p>
+      <p>
+        <%= enter.entry %>
+      </p>
+      <p>
+        <%= enter.age %>
+      </p>
+      <p>
+        <%= enter.date_created %>
+      </p>
+    </div>
+  </div>
+  </a>
+      <% }); %>
+  </body>
+</html>

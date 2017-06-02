@@ -1,0 +1,17 @@
+#container {
+  border: 2px solid black;
+  margin-bottom: 20px;
+  width: 800px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#content-container {
+  display: flex;
+}
+
+#main-images {
+  width: 250px;
+  height: 250px;
+}
