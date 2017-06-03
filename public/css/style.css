@@ -14,10 +14,18 @@
   font-size: 65px;
 }
 
+#logoanchor {
+  color: white;
+}
+
 #newPostLink {
-  color: black;
-  border: 2px solid black;
-  padding: 20px;
+  position: fixed;
+  color: white;
+  border: .5px solid black;
+  margin-left: 60px;
+  margin-top: 50px;
+  width: 150px;
+  height: 40px;
 }
 
 #content-container {
@@ -29,5 +37,22 @@
   height: 250px;
 }
 
-.container card-panel hoverable {
+#age_scale {
+  width: 1000px;
+}
+
+.range-field {
+  text-align: center;
+  margin-bottom: none;
+  padding-top:
+}
+ #center-age {
+  text-align: center;
+  font-family: 'Satisfy', cursive;
+  font-size: 30px;
+  margin-bottom: 0;
+ }
+
+#label {
+  margin-bottom: 0;
 }
