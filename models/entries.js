@@ -38,12 +38,18 @@ module.exports = {
           image = $/image/,
           age =   $/age/
       WHERE id =  $/id/
-      RETURNING *
       `, entry);
   },
   destroy(id) {
     return db.none(`
       DELETE FROM life_entries
       WHERE id = $1`, [id]);
-  }
+  },
+  sort(age) {
+    return db.any(`
+    SELECT *
+    FROM life_entries
+    WHERE age = $/age/
+    `, age)
+  },
 }

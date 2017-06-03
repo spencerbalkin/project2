@@ -15,4 +15,15 @@ $(document).ready(function(){
          console.log(err)
      });
    });
+
+   $("#age_scale").on("change", function() {
+     window.location.href = "/?age=" + $(this).val();
+   });
+
+   var ageGiven = window
+    .location
+    .search
+    .match(/age=(\d+)/)[1];
+
+   $("#age_scale").val(ageGiven);
 })

@@ -2,12 +2,26 @@ const Entry = require("../../models/entries");
 
 module.exports = {
   index: (req, res) => {
-    Entry.findAll()
-    .then((entry) => {
-      res.render('entries/index', {
-        entry: entry
+    if (req.query.age) {
+      Entry.sort({
+        age: req.query.age
       })
-    })
+      .then((entry) => {
+        res.render('entries/index', {
+          entry: entry
+        })
+      })
+      .catch((err) => {
+        res.send(err);
+      });
+    } else {
+      Entry.findAll()
+      .then((entry) => {
+        res.render('entries/index', {
+          entry: entry
+        })
+      })
+    }
   },
   id: (req, res) => {
     Entry.findById(req.params.id)
@@ -38,6 +52,15 @@ module.exports = {
       })
     })
   },
+  showUpdate: (req, res) => {
+    Entry.update(req.body.entry)
+    .then(() => {
+      res.redirect('/');
+    })
+    .catch((err) => {
+      res.status(400).send(err);
+    })
+  },
   destroy: (req, res) => {
     Entry.destroy(req.params.id)
     .then((data) => {
@@ -47,12 +70,4 @@ module.exports = {
       res.status(400).send(err);
     })
   },
-  showUpdate: (req, res) => {
-    Entry.update(req.body.entry)
-    .then(() => {
-      res.redirect('/');
-    }).catch((error) =>{
-      console.log('update error', error)
-    })
-  }
-}
+} // end of controller

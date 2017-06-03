@@ -22,45 +22,13 @@ router.route("/new")
   .get(controller.new)
   .post(controller.save);
 
+  router.route("/:id/edit")
+  .get(controller.update)
+  .put(controller.showUpdate);
 
 router.delete('/:id', controller.destroy);
 
 router.get('/:id',controller.id);
 
-router.route("/:id/edit")
-  .get(controller.update)
-  .put(controller.showUpdate);
 
-// //put route here for PUT/hotels/:id
-// router.puts("/:id", (req, res) => {
-//   res.json({
-//     page: `This is the PUT for ${req.params.id}`,
-//   })
-// });
-//
-// //put route here for DELETE /hotels/:id
-// router.delete("/:id", (req, res) => {
-//   res.json({
-//     page: `This is the DELETE for ${req.params.id}`,
-//   })
-// });
-//
-// router.route("/")
-//   .get(controller.index)
-//   .post(controller.create);
-//
-// //put route here for GET /hotels]
-// // router.get("/", (req, res) => {
-// //   res.json({
-// //     page: "This is the hotel listings page",
-// //   })
-// // });
-//
-// //put route here for POST /hotels
-// // router.post("/", (req, res) => {
-// //   res.json({
-// //     page: "This is the incoming data from a post",
-// //   })
-// });
-
-module.exports = router;
+module.exports = router; //end of index

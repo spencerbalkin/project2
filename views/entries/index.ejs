@@ -4,29 +4,45 @@
     <%- include ./partials/head.ejs %>
   </head>
   <body>
-    <a href="/new">new post</a>
-      <% entry.forEach(function(enter) { %>
-  <a href="<%= enter.id %>">
-  <div id="container">
-    <div id="content-container">
-      <div id="image-container">
-        <img id="main-images" src=<%= enter.image %> />
-      </div>
-      <p>
-        <%= enter.title %>
-      </p>
-      <p>
-        <%= enter.entry %>
-      </p>
-      <p>
-        <%= enter.age %>
-      </p>
-      <p>
-        <%= enter.date_created %>
-      </p>
+
+    <%# nav bar%>
+    <div class="col s12 m6 card-panel red darken-1" id="top-bar">
+      <h5 id="logo">wikiLife</h5>
     </div>
-  </div>
-  </a>
-      <% }); %>
+
+    <%# age scale%>
+    <div class="range-field col s3">
+      <label for="age_scale">Age</label>
+      <input type="range" id="age_scale" min="1" max="100" name="entry[id]" />
+    </div>
+
+    <%# new post button%>
+    <a id="newPostLink" href="/new">new post</a>
+
+    <%# posts%>
+    <% entry.forEach(function(enter) { %>
+      <a href="<%= enter.id %>">
+      <div class="container card-panel hoverable">
+        <div id="content-container">
+          <div id="image-container">
+            <img class="responsive-img" id="main-images" src=<%= enter.image %> />
+          </div>
+        <p>
+          <%= enter.title %>
+        </p>
+        <p>
+          <%= enter.entry %>
+        </p>
+        <p>
+          <%= enter.age %>
+        </p>
+        <p>
+          <%= enter.date_created %>
+        </p>
+        </div>
+      </div>
+      </a>
+    <% }); %>
+
   </body>
 </html>
