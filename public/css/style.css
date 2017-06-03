@@ -1,5 +1,4 @@
 .container {
-  border: 2px solid black;
   margin-bottom: 20px;
   width: 800px;
   height: 300px;
@@ -55,4 +54,32 @@
 
 #label {
   margin-bottom: 0;
+}
+
+.card-content {
+  margin-top: 100px;
+}
+
+#card-content-new {
+  margin-top: 0;
+}
+
+#newPost {
+  margin-left: 300px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-family: 'Railway', sans-serif;
+  color: rgba(0, 0, 0, .6)
+  ;
+}
+
+#newPostLink2 {
+  position: fixed;
+  color: white;
+  border: .5px solid black;
+  margin-left: 60px;
+  margin-top: 70px;
+  width: 80px;
+  height: 80px;
+  padding-top: 10px;
 }

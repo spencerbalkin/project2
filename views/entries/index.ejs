@@ -23,28 +23,28 @@
 
     <%# posts%>
     <% entry.forEach(function(enter) { %>
-      <a href="<%= enter.id %>">
-      <div class="container card-panel hoverable">
-        <div id="content-container">
-          <div id="image-container">
-            <img class="responsive-img" id="main-images" src=<%= enter.image %> />
-          </div>
-        <p>
-          <%= enter.title %>
-        </p>
-        <p>
-          <%= enter.entry %>
-        </p>
-        <p>
-          <%= enter.age %>
-        </p>
-        <p>
-          <%= enter.date_created %>
-        </p>
-        </div>
-      </div>
-      </a>
-    <% }); %>
+       <a href="<%= enter.id %>">
+       <div class="container card-panel hoverable">
+         <div id="content-container">
+           <div id="image-container">
+             <img class="responsive-img" id="main-images" src=<%= enter.image %> />
+           </div>
+         <p>
+           <%= enter.title %>
+         </p>
+         <p>
+           <%= enter.entry %>
+         </p>
+         <p>
+           <%= enter.age %>
+         </p>
+         <p>
+           <%= enter.date_created %>
+         </p>
+         </div>
+       </div>
+       </a>
+     <% }); %>
 
   </body>
 </html>

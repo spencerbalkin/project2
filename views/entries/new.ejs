@@ -4,14 +4,25 @@
     <%- include ./partials/head.ejs %>
   </head>
   <body>
+    <div class="col s12 m6 card-panel red darken-1 responsive-img" id="top-bar">
+      <h5 id="logo"><span class="hoverable"><a id="logoanchor" href="/">wikiLife</a></span></h5>
+    </div>
 
-    <form method="POST" action="/new">
+    <%# new post button%>
+    <a class="btn-floating btn-large waves-effect waves-light red" id="newPostLink2" href="/">Home</a>
+
+    <%# text above the form%>
+    <div id="aboveForm">
+      <h4 id="newPost">New Post</h4>
+    </div>
+
+    <form id="newPostForm" method="POST" action="/new">
       <div class="container margin-top-20">
         <div class="row">
           <div class="col s12">
             <div class="card">
               <div class="card-stacked">
-                <div class="card-content">
+                <div id="card-content-new" class="card-content">
 
                   <div class="input-field">
                     <input name="entry[title]" type="text" placeholder="Title" />
