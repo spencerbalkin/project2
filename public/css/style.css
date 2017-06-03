@@ -21,11 +21,23 @@
   position: fixed;
   color: white;
   border: .5px solid black;
-  margin-left: 60px;
+  margin-left: 35px;
   margin-top: 50px;
   width: 150px;
   height: 40px;
+  background-color: rgba(229, 57, 53, 1)
 }
+
+#editButton {
+  position: fixed;
+  color: white;
+  border: .5px solid black;
+  margin-left: 35px;
+  margin-top: 115px;
+  width: 150px;
+  height: 40px;
+}
+
 
 #content-container {
   display: flex;
@@ -43,7 +55,7 @@
 .range-field {
   text-align: center;
   margin-bottom: none;
-  padding-top:
+
 }
  #center-age {
   text-align: center;
@@ -53,7 +65,7 @@
  }
 
 #label {
-  margin-bottom: 0;
+  z-index: -1;
 }
 
 .card-content {
@@ -73,6 +85,24 @@
   ;
 }
 
+.row {
+  margin: 0 auto;
+}
+
+.cardContainer {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.materials-icon {
+  display: none;
+}
+
+.editHide {
+  display: none;
+}
+
 #newPostLink2 {
   position: fixed;
   color: white;
@@ -82,4 +112,8 @@
   width: 80px;
   height: 80px;
   padding-top: 10px;
+}
+
+#description {
+  font-weight: bold;
 }
