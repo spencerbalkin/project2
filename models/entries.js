@@ -38,6 +38,7 @@ module.exports = {
           image = $/image/,
           age =   $/age/
       WHERE id =  $/id/
+      RETURNING *
       `, entry);
   },
   destroy(id) {
