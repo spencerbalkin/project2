@@ -27,35 +27,29 @@
     <%# posts%>
     <div class="row">
     <% entry.forEach(function(enter) { %>
-      <a href="<%= enter.id %>">
-
       <div id="homepageContainer">
         <div class="cardContainer">
-            <div class="col s4">
-              <div class="card" href="<%= enter.id %>">
-                <div class="card-image">
-                  <img src="<%= enter.image %>">
-
-                  <div class="editHide">
-                  <a href="<%= enter.id %>/edit" class="btn-floating halfway-fab waves-effect waves-light red material-icons"><i class="material-icons">mode_edit</i></a>
-                  </div>
-                  <span class="card-title"><%= enter.title %></span>
-                </div>
-
-                <div class="card-content">
-                <p id="description">
-                Article
-                </p>
-                  <p><%= enter.entry%></p>
-                </div>
-                <div class="card-action">
-                  <a href="/?age=<%= enter.age %>">Age: <%= enter.age %></a>
-                  <p>
-                  Created:
-                  <%= enter.date_created %>
-                  </p>
-                </div>
+            <div class="col s4 card-reveal">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="<%= enter.image %>">
               </div>
+
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4"><%= enter.title %><i class="material-icons right editHide"><a href="<%= enter.id %>/edit">mode_edit</a></i></span>
+                <p><a id="ageBoox" href="/?age=<%= enter.age %>">Age: <%= enter.age %></a></p>
+                <p>
+                Created:
+                <%= enter.date_created %>
+                </p>
+              </div>
+
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4"><%= enter.title %></span>
+                <p><%= enter.entry %></p>
+                <a id="readMore" href="<%= enter.id %>">Read More</a><i id="editReveal" class="material-icons right"><a href="<%= enter.id %>/edit">mode_edit</a></i>
+              </div>
+</div>
           </div>
         </div>
       </div>

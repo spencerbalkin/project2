@@ -59,8 +59,9 @@
 }
  #center-age {
   text-align: center;
-  font-family: 'Satisfy', cursive;
+  font-family: 'Raleway', cursive;
   font-size: 30px;
+  font-weight: bold;
   margin-bottom: 0;
  }
 
@@ -191,4 +192,16 @@
 
 #idCard {
   margin-top: 25px;
+}
+
+#readMore {
+  color: rgba(229, 57, 53, 1);
+}
+
+#ageBoox {
+  color: rgba(229, 57, 53, 1);
+}
+
+#editReveal {
+  margin-top: 100px;
 }
