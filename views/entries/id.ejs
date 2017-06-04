@@ -4,18 +4,31 @@
     <%- include ./partials/head.ejs %>
   </head>
   <body>
-    <p>
-    <%= entry.title %>
-    </p>
-    <img src=<%= entry.image %> />
-    <p>
-    <%= entry.entry %>
-    </p>
-    <p>
-    <%= entry.age %>
-    </p>
-    <p>
-    <%= entry.date_created %>
-    </p>
-  </body>
+    <%# nav bar%>
+    <div class="col s12 m6 card-panel red darken-1 responsive-img" id="top-bar">
+      <h5 id="logo"><span class="hoverable"><a id="logoanchor" href="/">wikiLife</a></span></h5>
+    </div>
+
+    <div id="idCard" class="col s12 m7">
+      <div class="card horizontal">
+        <div class="card-image">
+          <img src="<%= entry.image %>">
+        </div>
+        <div class="card-stacked">
+          <div id="id-content-box" class="card-content">
+            <h2 class="header"><%= entry.title %></h2>
+            <p><%= entry.entry %></p>
+          </div>
+            <a id="ageId" href="/?age=<%= entry.age %>"><%= entry.age %></a>
+
+            <p id="dcId"><%= entry.date_created %></p>
+
+            <div class="card-action">
+              <a class="btn-floating btn-large waves-effect waves-light red" id="homeId" href="/">Home</a>
+
+              <a id="editIdButton" href="<%= entry.id %>/edit" class="btn-floating halfway-fab waves-effect waves-light material-icons"><i class="material-icons">mode_edit</i></a>
+          </div>
+        </div>
+      </div>
+    </div>
 </html>
