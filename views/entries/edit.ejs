@@ -5,15 +5,23 @@
   </head>
   <body>
 
+    <%# nav bar%>
+    <div class="col s12 m6 card-panel red darken-1 responsive-img" id="top-bar">
+      <h5 id="logo"><span class="hoverable"><a id="logoanchor" href="/">wikiLife</a></span></h5>
+    </div>
+
+    <%# Home button%>
+    <a class="btn-floating btn-large waves-effect waves-light red" id="homeEdit" href="/">Home</a>
+
+    <h4 id="editHeader">Edit Your Post</h4>
+
     <div class="container margin-top-20">
       <div class="row">
-        <div class="col s12">
+        <div id="moveForm" class="col s12">
           <div class="card horizontal">
-
-
-            <form method="POST" action="/<%= entry.id %>/edit?_method=put">
+            <form id="editForm" method="POST" action="/<%= entry.id %>/edit?_method=put">
               <div class="card-stacked">
-                <div class="card-content">
+                <div id="editCard" class="card-content">
                     <div class="input-field">
                     <input name="entry[title]" type="text" placeholder="Title" value="<%= entry.title %>" />
                   </div>
@@ -34,12 +42,17 @@
                     <input type="hidden" name="entry[id]" value="<%= entry.id %>">
                   </div>
                 </div>
+
                 <div class="card-action">
-                  <button class="waves-effect waves-light btn">Submit Changes</button>
+                  <button id="editSubmit" class="waves-effect waves-light btn">Submit Changes</button>
+
+                  <a data-id='<%= entry.id %>'  class="btn-floating btn-large waves-effect waves-light red" id="delete-button" href="/"><i class="material-icons">delete</i>
+                  </a>
                 </div>
+
               </div>
             </form>
-            <button data-id='<%= entry.id %>' type="button" id="delete-button">Delete Post</button>
+
           </div>
         </div>
       </div>

@@ -117,3 +117,41 @@
 #description {
   font-weight: bold;
 }
+
+#editForm {
+  width: 800px;
+  height: 550px;
+}
+
+#editHeader {
+  margin-left: 300px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  font-family: 'Railway', sans-serif;
+  color: rgba(0, 0, 0, .6);
+}
+
+#editCard {
+  margin-top: 20px;
+}
+
+#delete-button{
+  margin-left: 750px;
+  margin-top: -1040px;
+}
+
+#moveForm {
+  margin-top: 50px;
+}
+
+#homeEdit {
+  position: fixed;
+  color: white;
+  border: .5px solid black;
+  margin-left: 60px;
+  margin-top: 70px;
+  width: 80px;
+  height: 80px;
+  padding-top: 10px;
+  background-color: black;
+}
